@@ -25,8 +25,8 @@ export async function initDb() {
       type TEXT NOT NULL CHECK(type IN ('fixed', 'variable')),
       sector TEXT NOT NULL,
       paid_by TEXT NOT NULL CHECK(paid_by IN ('José', 'Karen')),
-      created_at TEXT NOT NULL DEFAULT (datetime('now')),
-      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
     )
   `);
 }
