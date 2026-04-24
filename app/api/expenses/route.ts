@@ -51,6 +51,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ id: Number(result.lastInsertRowid) }, { status: 201 });
   } catch (error) {
     console.error("POST /api/expenses error:", error);
-    return NextResponse.json({ error: "Erro ao criar gasto", detail: String(error) }, { status: 500 });
+    return NextResponse.json({ error: "Erro ao criar gasto" }, { status: 500 });
   }
 }

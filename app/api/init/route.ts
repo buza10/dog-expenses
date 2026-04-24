@@ -7,6 +7,6 @@ export async function GET() {
     return NextResponse.json({ success: true, message: "Banco inicializado com sucesso" });
   } catch (error) {
     console.error("DB init error:", error);
-    return NextResponse.json({ error: "Erro ao inicializar banco", detail: String(error) }, { status: 500 });
+    return NextResponse.json({ error: "Erro ao inicializar banco" }, { status: 500 });
   }
 }
